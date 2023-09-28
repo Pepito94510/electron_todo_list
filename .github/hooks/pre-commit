@@ -6,7 +6,7 @@ try {
     let branch = execSync("git rev-parse --abbrev-ref HEAD").toString().trim()
 
     if(branch === "main" || branch === "develop" || branch.includes("rebase")) {
-        console.error(`Tu ne peux pas commit sur la branch $(branch) directement`)
+        console.error(`Tu ne peux pas commit sur la branch ${branch} directement`)
         process.exit(2)
     }
 
